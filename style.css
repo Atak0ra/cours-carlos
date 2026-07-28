@@ -432,6 +432,50 @@ img, svg {
   height: 23px;
 }
 
+.hero-trade-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.hero-trade-toggle .icon-badge {
+  border: 1.5px dashed rgba(247, 242, 231, 0.4);
+  background: transparent;
+  transition: transform 0.2s ease;
+}
+
+.hero-trade-toggle[aria-expanded="true"] .icon-badge {
+  transform: rotate(45deg);
+}
+
+.hero-trade-more {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.hero-trade-more[hidden] {
+  display: none;
+}
+
+.trade-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: rgba(247, 242, 231, 0.85);
+  background: rgba(247, 242, 231, 0.1);
+  border: 1px solid rgba(247, 242, 231, 0.2);
+  padding: 0.4rem 0.85rem;
+  border-radius: 99px;
+}
+
 /* ---------- Sections ---------- */
 .section {
   padding: 3.5rem 0;

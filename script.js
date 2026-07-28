@@ -18,6 +18,17 @@ mainNav.querySelectorAll('a').forEach((link) => {
 // Année courante dans le footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Bande "pour qui" du hero : afficher les métiers additionnels au clic
+const tradeToggle = document.getElementById('hero-trade-toggle');
+const tradeMore = document.getElementById('hero-trade-more');
+
+tradeToggle.addEventListener('click', () => {
+  const isOpen = tradeMore.hidden;
+  tradeMore.hidden = !isOpen;
+  tradeToggle.setAttribute('aria-expanded', String(isOpen));
+  tradeToggle.querySelector('span:last-child').textContent = isOpen ? 'Voir moins' : 'Voir plus';
+});
+
 // Filigrane du hero : grille blueprint + icônes (crayon, équerre) en fondu.
 // Le ruban gradué est déjà la vedette visuelle, on garde ce filigrane discret.
 // Desktop uniquement, 30fps, zéro dépendance.
